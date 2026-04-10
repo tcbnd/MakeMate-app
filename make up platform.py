@@ -16,8 +16,11 @@ from PIL import Image
 
 try:
 	import cv2
-	import mediapipe as mp
+except Exception:
+	cv2 = None
 
+try:
+	import mediapipe as mp
 	HAS_MEDIAPIPE = True
 except Exception:
 	HAS_MEDIAPIPE = False
@@ -258,6 +261,16 @@ def estimate_undertone(image_np: np.ndarray) -> str:
 
 def check_face_quality(image_np: np.ndarray) -> FaceQuality:
 	"""檢查臉部掃描品質"""
+	if cv2 is None:
+		return FaceQuality(
+			is_clear=False,
+			brightness_level=0.0,
+			face_size_ratio=0.0,
+			landmarks_confidence=0.0,
+			issues=["⚠️ 伺服器未安裝 OpenCV（cv2），已改用基本模式。"],
+			quality_score=0.0,
+		)
+
 	issues = []
 	brightness_score = 0.0
 	face_size_score = 0.0
