@@ -1,0 +1,350 @@
+/* ===== Palette (from cover image) =====
+   Warm beige bg : #d4b896 / #cbb08a
+   Rose gold     : #c9a07a / #b8927a
+   Champagne gold: #d4ad6e / #e2c08d
+   Cyan tech     : #7dd4d4 / #a0e8e8
+   Deep warm     : #211e19 / #2a2520
+   Cream text    : #f5ece0
+   ======================================= */
+
+/* ===== Global Warm-Light Theme ===== */
+section[data-testid="stMain"] {
+    background-color: #ffebd9;
+}
+
+.stApp {
+    background-color: #ffebd9;
+    color: #3a2e24;
+}
+
+header[data-testid="stHeader"] {
+    background-color: #3a2e24 !important;
+    color: #f5ece0 !important;
+}
+
+header[data-testid="stHeader"] * {
+    color: #f5ece0 !important;
+}
+
+/* ===== Hero Banner ===== */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(58, 53, 48, 0.93) 0%,
+        rgba(58, 53, 48, 0.65) 40%,
+        rgba(58, 53, 48, 0.15) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+}
+
+.hero-overlay h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #f5ece0;
+    margin: 0 0 0.6rem 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.hero-overlay p {
+    font-size: 1.05rem;
+    color: rgba(212, 184, 150, 0.85);
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Section Headers ===== */
+.stApp h2, .stApp h3 {
+    color: #3a2518 !important;
+    font-weight: 700;
+}
+
+.stApp [data-testid="stSubheader"] {
+    color: #3a2518 !important;
+    border-bottom: 1px solid rgba(160, 120, 70, 0.25);
+    padding-bottom: 0.4rem;
+    margin-top: 1.5rem;
+}
+
+/* ===== Buttons ===== */
+.stApp button[kind="secondary"],
+.stApp .stButton > button {
+    background-color: rgba(160, 120, 70, 0.10) !important;
+    color: #4a3828 !important;
+    border: 1px solid rgba(160, 120, 70, 0.35) !important;
+    border-radius: 8px !important;
+    padding: 0.45rem 1.2rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+
+.stApp .stButton > button:hover {
+    background-color: rgba(160, 120, 70, 0.20) !important;
+    border-color: rgba(160, 120, 70, 0.55) !important;
+}
+
+/* Primary / scan button */
+.stApp .stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, #b8876a 0%, #c9a07a 50%, #d4ad6e 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(160, 120, 70, 0.3) !important;
+}
+
+.stApp .stButton > button[kind="primary"]:hover {
+    background: linear-gradient(135deg, #c9a07a 0%, #d4ad6e 50%, #e2c08d 100%) !important;
+}
+
+/* ===== File Uploader ===== */
+.stApp [data-testid="stFileUploader"] {
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px dashed rgba(160, 120, 70, 0.30);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.stApp [data-testid="stFileUploader"] label {
+    color: #5a4530 !important;
+}
+
+.stApp [data-testid="stFileUploader"] button {
+    background-color: rgba(160, 120, 70, 0.12) !important;
+    color: #6b4f35 !important;
+    border: 1px solid rgba(160, 120, 70, 0.35) !important;
+}
+
+/* ===== Text Input ===== */
+.stApp .stTextInput > div > div > input {
+    background-color: rgba(255, 255, 255, 0.50) !important;
+    color: #3a2e24 !important;
+    border: 1px solid rgba(160, 120, 70, 0.25) !important;
+    border-radius: 8px !important;
+}
+
+.stApp .stTextInput > div > div > input:focus {
+    border-color: rgba(185, 135, 106, 0.60) !important;
+    box-shadow: 0 0 0 1px rgba(185, 135, 106, 0.25) !important;
+}
+
+/* ===== Chat Input ===== */
+.stApp [data-testid="stChatInput"] {
+    background-color: rgba(255, 255, 255, 0.50) !important;
+    border: 1px solid rgba(160, 120, 70, 0.25) !important;
+    border-radius: 10px !important;
+}
+
+.stApp [data-testid="stChatInput"] textarea {
+    color: #3a2e24 !important;
+}
+
+/* ===== Selectbox ===== */
+.stApp .stSelectbox > div > div {
+    background-color: rgba(255, 255, 255, 0.50) !important;
+    border: 1px solid rgba(160, 120, 70, 0.25) !important;
+    border-radius: 8px !important;
+    color: #3a2e24 !important;
+}
+
+/* ===== Info Box ===== */
+.stApp .stAlert {
+    background-color: rgba(185, 135, 106, 0.10) !important;
+    border: 1px solid rgba(185, 135, 106, 0.30) !important;
+    border-radius: 10px !important;
+    color: #6b4530 !important;
+}
+
+/* ===== Image Display ===== */
+.stApp [data-testid="stImage"] {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ===== Chat Messages ===== */
+.stApp [data-testid="stChatMessage"] {
+    background-color: rgba(255, 255, 255, 0.40) !important;
+    border: 1px solid rgba(160, 120, 70, 0.15) !important;
+    border-radius: 10px !important;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Audio Player ===== */
+.stApp audio {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ===== Captions ===== */
+.stApp .stCaption, .stApp [data-testid="stCaptionContainer"] {
+    color: rgba(100, 75, 50, 0.55) !important;
+}
+
+/* ===== Columns Gap ===== */
+.stApp [data-testid="stHorizontalBlock"] {
+    gap: 2.5rem;
+}
+
+/* ===== Block Container ===== */
+.e3v525e0,
+.e1vtqrcf1,
+.st-bb {
+    background-color: #ffffff !important;
+}
+
+/* ===== Result Cards ===== */
+.result-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 6px rgba(160, 120, 70, 0.08);
+}
+
+.result-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #3a2518;
+}
+
+.metric-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.metric-box {
+    flex: 1;
+    background: #fdf6ef;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+}
+
+.metric-box .label {
+    font-size: 0.82rem;
+    color: #8a7060;
+    margin-bottom: 0.3rem;
+}
+
+.metric-box .value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #c9856a;
+}
+
+.shape-desc {
+    font-size: 0.95rem;
+    color: #5a4530;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* ===== Look Card ===== */
+.look-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 6px rgba(160, 120, 70, 0.08);
+}
+
+.look-card h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.15rem;
+    color: #3a2518;
+}
+
+.look-card .section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #5a4530;
+    margin: 0.8rem 0 0.4rem 0;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chip {
+    display: inline-block;
+    background: #f5efe8;
+    border: 1px solid rgba(160, 120, 70, 0.18);
+    border-radius: 20px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.88rem;
+    color: #5a4530;
+}
+
+/* ===== Section Title with Emoji ===== */
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3a2518;
+    margin: 1.5rem 0 0.6rem 0;
+}
+
+/* ===== Tutorial Steps ===== */
+.step-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px rgba(160, 120, 70, 0.06);
+    font-size: 0.93rem;
+    color: #3a2e24;
+    line-height: 1.6;
+}
+
+.step-item .step-num {
+    display: inline-block;
+    background: #c9856a;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-right: 0.6rem;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #ffebd9;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(160, 120, 70, 0.25);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(160, 120, 70, 0.40);
+}
